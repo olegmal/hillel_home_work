@@ -5,8 +5,8 @@
 # наприклад "Word 'Python' has 6 letters".
 # Для отримання слова для аналізу скористайтеся константою або функцією input().
 
-my_word = input("Pls, enter the word: ")
-print(f'Word {my_word} has {len(my_word)} letters')
+# my_word = input("Pls, enter the word: ")
+# print(f'Word {my_word} has {len(my_word)} letters')
 
 # 2. Напишіть программу "Касир в кінотеватрі", яка попросіть користувача ввести свсвій вік
 # (можно використати константу або функцію input(), на екран має бути виведено лише одне повідомлення,
@@ -19,22 +19,24 @@ print(f'Word {my_word} has {len(my_word)} letters')
 
 
 
-cashier = int(input("Скільки Вам років? "))
+cashier = input("Скільки Вам років? ")
 
-if cashier < 7:
-    print("Де твої батьки?")
+if cashier.isdigit():
+    other_cashier = int(cashier)
+    if other_cashier < 7:
+        print("Де твої батьки?")
 
-elif "7" in str(cashier):
-    print("Вам сьогодні пощастить!")
+    elif other_cashier < 16:
+        print("Це фільм для дорослих!")
 
-elif cashier < 16:
-    print("Це фільм для дорослих!")
+    elif other_cashier > 65:
+        print("Покажіть пенсійне посвідчення!")
 
-elif cashier > 65:
-    print("Покажіть пенсійне посвідчення!")
+    elif "7" in cashier:
+        print("Вам сьогодні пощастить!")
 
-else:
-    print("А білетів вже немає!")
-
+    else:
+        print("А білетів вже немає!")
+else: print("Ви ввели щось не те!")
 
 
