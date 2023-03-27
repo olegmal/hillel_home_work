@@ -4,8 +4,14 @@
 
 my_list = [11, 77, 4, 22, 0, 56, 5, 95, 7, 5, 87, 13, 45, 67, 44]
 
-my_list = [item for item in my_list if item < 21 or item > 74]
+i = 0
+while i < len(my_list):
+    if my_list[i] < 21 or my_list[i] > 74:
+        del my_list[i]
+    else:
+        i +=1
 print(my_list)
+
 
 
 
@@ -34,7 +40,7 @@ for key, value in my_dict.items():
         print(key)
 
 
-# Інший варіант:
+# # Інший варіант:
 
 dict1 = ({key: v for key, v in my_dict.items() if v > lower_limit and v < upper_limit})
 
