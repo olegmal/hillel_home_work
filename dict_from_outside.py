@@ -30,11 +30,11 @@ print(f"Середній вік чоловіків з коричневим во�
 
 # Люди з Луісвілля:
 
-count = 0
+count = []
 
 for user in users:
     if user['address'].get('city', 0) == 'Louisville':
-        count += 1
-        print(count)
+        count.append(user["lastName"])
+print(count)
 
 
