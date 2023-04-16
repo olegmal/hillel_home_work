@@ -55,4 +55,5 @@ def stupid_calc(num1, num2):
 
 stupid_calc(num1, num2)
 
+
 # 3.Напишіть докстрінг для обох функцій
